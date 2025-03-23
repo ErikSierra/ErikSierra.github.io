@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Update the email address below to your email
-    $to = "your_email@example.com";
+    $to = "erik.sierra77@gmail.com";
     $name = strip_tags($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars($_POST['message']);
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "Reply-To: $email\r\n";
     
     if (mail($to, $subject, $body, $headers)) {
-      echo "Thank you for contacting us. We'll get back to you soon.";
+      echo "Thanks for reaching out! I'll be in touch soon.";
     } else {
       echo "Sorry, there was a problem sending your message. Please try again later.";
     }
