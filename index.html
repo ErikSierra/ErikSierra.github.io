@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Erik Sierra | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Erik Sierra</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <h1>Erik Sierra</h1>
-    <p>CS Student • IT Intern • Tech Enthusiast</p>
+    <nav class="navbar">
+      <h1>Erik Sierra</h1>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://github.com/ErikSierra/BudgetTracker" target="_blank">BudgetTracker Repo</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="projects">
-    <h2>🚀 Projects</h2>
+  <main>
+    <section class="intro">
+      <h2>Welcome!</h2>
+      <p>I'm Erik, a CS student interested in data, automation, and building useful tools.</p>
+    </section>
 
-    <div class="project-card">
-      <h3>💰 BudgetTracker</h3>
-      <p>
-        Python-based automation tool to ingest credit card transactions from CSVs, clean the data, and upload it to an Azure SQL database.
-      </p>
-      <p><strong>Tech:</strong> Python, Azure SQL, Azure Key Vault, Pandas, Power BI</p>
-      <a href="https://github.com/ErikSierra/BudgetTracker" target="_blank">🔗 View on GitHub</a>
-    </div>
-
-    <!-- Add more projects here as needed -->
-
-  </section>
-
-  <footer>
-    <p>© 2025 Erik Sierra • Built with ❤️ using GitHub Pages</p>
-  </footer>
-
+    <section id="projects">
+      <h2>Featured Project</h2>
+      <div class="project-card">
+        <h3>💰 BudgetTracker</h3>
+        <p>A personal finance pipeline that automates Discover card transaction ingestion using Python and Azure SQL. Data is visualized in Power BI.</p>
+        <a href="https://github.com/ErikSierra/BudgetTracker" target="_blank">View on GitHub</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
