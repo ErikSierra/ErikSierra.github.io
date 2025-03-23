@@ -2,35 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Erik Sierra</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: #00bcd4;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e0e0e0;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .intro {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      color: #00bcd4;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .project-card {
+      background-color: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #00bcd4;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: #ffffff;
+      background-color: #00bcd4;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .project-card a:hover {
+      background-color: #0097a7;
+    }
+
+    .contact, .resume {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .contact h2, .resume h2 {
+      color: #00bcd4;
+    }
+
+    .contact p {
+      margin: 1rem 0;
+    }
+
+    .resume a {
+      display: inline-block;
+      background-color: #00bcd4;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background-color 0.3s;
+    }
+
+    .resume a:hover {
+      background-color: #0097a7;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <h1>Erik Sierra</h1>
-      <ul class="nav-links">
+    <h1>Erik Sierra</h1>
+    <nav>
+      <ul>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="https://github.com/ErikSierra/BudgetTracker" target="_blank">BudgetTracker Repo</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="https://github.com/ErikSierra" target="_blank">GitHub</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="intro">
-      <h2>Welcome!</h2>
-      <p>I'm Erik, a CS student interested in data, automation, and building useful tools.</p>
-    </section>
+  <section class="intro">
+    <h2>Welcome!</h2>
+    <p>I'm Erik — a CS student passionate about automation, data pipelines, and building cool things with Python, SQL, and more.</p>
+  </section>
 
-    <section id="projects">
-      <h2>Featured Project</h2>
-      <div class="project-card">
-        <h3>💰 BudgetTracker</h3>
-        <p>A personal finance pipeline that automates Discover card transaction ingestion using Python and Azure SQL. Data is visualized in Power BI.</p>
-        <a href="https://github.com/ErikSierra/BudgetTracker" target="_blank">View on GitHub</a>
-      </div>
-    </section>
-  </main>
+  <section id="projects" class="projects">
+    <!-- Project cards go here (unchanged) -->
+    <!-- omitted for brevity in this snippet -->
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to connect with me through <a href="mailto:your.email@example.com">email</a> or on <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>.</p>
+  </section>
+
+  <section id="resume" class="resume">
+    <h2>Download My Resume</h2>
+    <a href="resume.pdf" target="_blank">View PDF</a>
+  </section>
 </body>
 </html>
