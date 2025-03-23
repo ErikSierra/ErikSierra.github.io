@@ -26,10 +26,11 @@
       position: relative;
       z-index: 2;
     }
+    /* Ensure the background fills the entire window */
     #particles-js {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: #00000A;
       background-repeat: no-repeat;
       background-size: cover;
@@ -59,7 +60,7 @@
       margin: 0;
       padding: 0;
     }
-    nav a, nav button {
+    nav a {
       text-decoration: none;
       color: var(--fg);
       font-weight: 500;
@@ -69,7 +70,7 @@
       font-size: 1rem;
       transition: color 0.3s;
     }
-    nav a:hover, nav button:hover {
+    nav a:hover {
       color: var(--accent);
     }
     .contact-info {
@@ -94,7 +95,7 @@
 </head>
 <body>
   <div id="particles-js"></div>
-  <!-- Header & Navigation -->
+  <!-- Header & Navigation without the Toggle Theme button -->
   <header>
     <h1>Erik Sierra</h1>
     <nav>
@@ -104,11 +105,10 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="resume.pdf" target="_blank">Resume</a></li>
         <li><a href="https://github.com/ErikSierra" target="_blank">GitHub</a></li>
-        <li><button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button></li>
       </ul>
     </nav>
   </header>
-  <!-- Contact Info Content -->
+  <!-- Contact Information Content -->
   <div class="contact-info">
     <h2>Contact Information</h2>
     <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <span onclick="copyToClipboard('erik.sierra77@gmail.com')">erik.sierra77@gmail.com</span></p>
@@ -116,17 +116,6 @@
     <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <span onclick="copyToClipboard('4192650169')">419.265.0169</span></p>
   </div>
   <script>
-    function toggleTheme() {
-      const root = document.documentElement;
-      const currentBg = getComputedStyle(root).getPropertyValue('--bg').trim();
-      if (currentBg === '#121212') {
-        root.style.setProperty('--bg', '#ffffff');
-        root.style.setProperty('--fg', '#121212');
-      } else {
-        root.style.setProperty('--bg', '#121212');
-        root.style.setProperty('--fg', '#e0e0e0');
-      }
-    }
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text);
       alert('Copied: ' + text);
@@ -138,7 +127,12 @@
       "particles": {
         "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
         "color": { "value": "#ffffff" },
-        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" },
+          "polygon": { "nb_sides": 5 },
+          "image": { "src": "img/github.svg", "width": 100, "height": 100 }
+        },
         "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } },
         "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } },
         "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
