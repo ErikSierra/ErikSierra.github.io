@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erik Sierra - Projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -80,13 +80,44 @@
     .content h2 {
       color: var(--accent);
       text-align: center;
+      margin-bottom: 2rem;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
     }
     .project-card {
       background-color: #1e1e1e;
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      margin: 1rem 0;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+    .project-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    .project-card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: #ffffff;
+      background-color: var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .project-card a:hover {
+      background-color: var(--accent-dark);
     }
   </style>
 </head>
@@ -109,16 +140,52 @@
   <!-- Projects Content -->
   <div class="content">
     <h2>Projects</h2>
-    <!-- Example project cards -->
-    <div class="project-card">
-      <h3>Project Title 1</h3>
-      <p>Description for project 1.</p>
-      <a href="#">View Details</a>
-    </div>
-    <div class="project-card">
-      <h3>Project Title 2</h3>
-      <p>Description for project 2.</p>
-      <a href="#">View Details</a>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>MailChecker</h3>
+        <p>A tool to check and validate emails.</p>
+        <a href="https://github.com/ErikSierra/MailChecker" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Outlook_Excel_Combo</h3>
+        <p>Integrates Outlook and Excel for automated workflows.</p>
+        <a href="https://github.com/ErikSierra/Outlook_Excel_Combo" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>ExcelFileMerge</h3>
+        <p>Merges multiple Excel files into one consolidated file.</p>
+        <a href="https://github.com/ErikSierra/ExcelFileMerge" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>TextBasedGame</h3>
+        <p>A fun and interactive text-based game.</p>
+        <a href="https://github.com/ErikSierra/TextBasedGame" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>EarSketch-Ringtone</h3>
+        <p>Create custom ringtones using EarSketch.</p>
+        <a href="https://github.com/ErikSierra/EarSketch-Ringtone" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>CollisionGame</h3>
+        <p>A game built around collision detection mechanics.</p>
+        <a href="https://github.com/ErikSierra/CollisionGame" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>NumberGuesser</h3>
+        <p>A simple game where you guess numbers with interactive feedback.</p>
+        <a href="https://github.com/ErikSierra/NumberGuesser" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>2D-animation</h3>
+        <p>Animations built using 2D graphics techniques.</p>
+        <a href="https://github.com/ErikSierra/2D-animation" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Raspberry-Pi</h3>
+        <p>Projects and experiments using the Raspberry Pi.</p>
+        <a href="https://github.com/ErikSierra/Raspberry-Pi" target="_blank">View on GitHub</a>
+      </div>
     </div>
   </div>
   <script>
@@ -138,59 +205,18 @@
   <script>
     particlesJS("particles-js", {
       "particles": {
-        "number": {
-          "value": 80,
-          "density": { "enable": true, "value_area": 800 }
-        },
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
         "color": { "value": "#ffffff" },
-        "shape": {
-          "type": "circle",
-          "stroke": { "width": 0, "color": "#000000" },
-          "polygon": { "nb_sides": 5 },
-          "image": { "src": "img/github.svg", "width": 100, "height": 100 }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false,
-          "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
-        }
+        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } },
+        "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } },
+        "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } }
       },
       "interactivity": {
         "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" },
-          "resize": true
-        },
-        "modes": {
-          "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
-          "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
-          "repulse": { "distance": 200, "duration": 0.4 },
-          "push": { "particles_nb": 4 },
-          "remove": { "particles_nb": 2 }
-        }
+        "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+        "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } }
       },
       "retina_detect": true
     });
